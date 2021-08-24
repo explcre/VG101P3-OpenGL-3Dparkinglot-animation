@@ -63,10 +63,11 @@ we use vector position and vector velocity to describe motion of object
 void init( ) initialize the position of object.
 note: angle1 is the angle formed by z-axis and position, angle 2 is the angle formed by y-axis and position, distance is from the origin
 
-#about class motion_mouse (in head.h)
+# about class motion_mouse (in head.h)
 attributes: int xOrigin=-1,yOrigin=-1
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-#about class ElemFigure( in head.h)
+# about class ElemFigure( in head.h)
 attributes: float length,width,height,red,green,blue
                  vector position
 methods:  virtual float getLength( );
@@ -78,7 +79,7 @@ methods:  virtual float getLength( );
                  virtual void rotate(float angle);
                  virtual void zoom(float k);
                  virtual ~ElemFigure();
-#about class Cone (derived from ElemFigure)
+# about class Cone (derived from ElemFigure)
 attributes:  float radius, axislength;
     vector position;
     float red, green,blue
@@ -88,7 +89,7 @@ void draw();
 void rotate(float angle);
 virtual ~Cone( );
 
-#about class Ellipsoid(derived from ElemFigure)
+# about class Ellipsoid(derived from ElemFigure)
 attributes: float length, width, height;
     vector position;
     float red, green,blue
@@ -98,7 +99,7 @@ void draw( );
 void rotate(float angle);
 virtual ~Ellipsoid( );
 
-#about class HalfEllipsoid(derived from ElemFigure)
+# about class HalfEllipsoid(derived from ElemFigure)
 attributes: float length, width, height;
     vector position;
     float red, green,blue
@@ -108,7 +109,7 @@ void draw( );
 void rotate(float angle);
 virtual ~HalfEllipsoid( );
 
-#about class Cuboid(derived from ElemFigure)
+# about class Cuboid(derived from ElemFigure)
 attributes: float length, width, height;
     vector position;
    float red, green,blue
@@ -118,7 +119,7 @@ void draw( );
 void rotate(float angle);
 virtual ~Cuboid( );
 
-#about class Cylinder (derived from ElemFigure)
+# about class Cylinder (derived from ElemFigure)
 attributes:  float radius, axislength;
     vector position;
     float red, green,blue
@@ -127,6 +128,7 @@ Cylinder(float radius, float axislength, float x1, float y1, float z1);
 void draw();
 void rotate(float angle);
 virtual ~Cylinder( );
+
 ---------------------------------------------------------------------------------------------------------------
 #about class shape
 attributes:
@@ -142,27 +144,27 @@ methods:
                  void changeW(float width_1);
 note: class shape and class ElemFigure are very similar classes, because in complex figures (rocket and UFO), we need to "has a" derived class of ElemFigure, thus we use class shape to avoid confliction and add flexibility to change its size.
 
-#about class Rocket(derived from class shape and class motion)
+# about class Rocket(derived from class shape and class motion)
 attributes:float scale, deltaAngle1, deltaAngle2, l, w,h
                 vector position
 methods: void drawZoomIO( ): to draw rocket and change its scale( zoom in and zoom out)as well.
                 void changeROCKET(Rocket R): to change l, w,h and position according to Rocket R
                 virtual ~Rocket( );
 
-#about class Flag(derived from class shape and class motion)
+# about class Flag(derived from class shape and class motion)
 attributes: float scale, deltaAngle1, deltaAngle2, l, w,h
                 vector position
 methods:  void draw(float x, float y, float z, float vx, float vz): to draw the flag and make it move in y direction when x-velocity and z-velocity isn't 0
                  virtual ~Flag( );
 
-#about class Car(derived from class shape and class motion)
+# about class Car(derived from class shape and class motion)
 attributes: float scale, deltaAngle1, deltaAngle2, l, w,h
                 vector position
 methods:  void draw( ): to draw one car
                  void changeCAR(Car C): to change l,w,h and position of car
                  virtual ~Car( );
 
-#about class UFO(derived from class shape and class motion)
+# about class UFO(derived from class shape and class motion)
 attributes: float scale, deltaAngle1, deltaAngle2, l, w,h
                 vector position
 methods:  void draw( ): to draw one UFO
@@ -170,14 +172,15 @@ methods:  void draw( ): to draw one UFO
                  void changeUFO(UFO U)
                  virtual ~UFO( );
 
-#about class Teleported(derived from class shape and class motion)
+# about class Teleported(derived from class shape and class motion)
 attributes: float scale, l, w,h
                 vector position
 methods:  void draw( ): to draw one teleported and change color
                  void changeTeleported(Teleported T)
                  virtual ~Teleported( );
+                 
 ------------------------------------------------------------------------
-#about class Wall
+# about class Wall
 attributes:
 vector wallposition;
     float length, width, height;
@@ -188,7 +191,7 @@ void drawDoor()// the door in the entrance of the parking lot, will change color
 void drawPark()// the walls around, total number is generated by the number user enters
 
 
-#about class ParkData
+# about class ParkData
 attributes:(protected)
 protected:
     int park_n;         //number of park
@@ -244,6 +247,7 @@ float min(float x, float y);
 float max(float x, float y);
 float mult(float x1, float y1, float x2, float y2, float xx, float yy);
 float cross(float x1, float y1, float x2, float y2, float xx, float yy);
+
 ----------------------------------------------------------------------------------------
 
 On these basis, we define class Game to contain all the data and control function of the project.
@@ -290,6 +294,7 @@ void init_car()//intialize the car
 void init_flag( )//initialize the flag
 
 static Game *game = Game::getInstance();
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 # about the interactive interface (information contained in Control.h)
 

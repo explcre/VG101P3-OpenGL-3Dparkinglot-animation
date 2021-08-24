@@ -19,15 +19,20 @@ Our project deserves bonuses because:
 # Hierarchy Diagram
 
 ElemFigure___Cuboid
-   |____________Cone
-   |____________Ellipsoid
-   |____________HalfEllipsoid
-   |____________Cylinder
+   |____________ Cone
+   
+   |____________ Ellipsoid
+   
+   |____________ HalfEllipsoid
+   
+   |____________ Cylinder
 
-shape________            _______Rocket
-motion______-------- |_______Flag
-                                 |_______UFO
-                                 |_______Teleported
+shape________         
+                      _______Rocket
+
+motion______-------- |_______ Flag
+                     |_______ UFO
+                     |_______ Teleported
 
 vector
 motion_mouse

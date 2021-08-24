@@ -21,18 +21,24 @@ Our project deserves bonuses because:
 ElemFigure___Cuboid
    |____________ Cone
    
+   
    |____________ Ellipsoid
+   
    
    |____________ HalfEllipsoid
    
+   
    |____________ Cylinder
+   
 
 shape________         
-                      _______Rocket
+                        _______Rocket
+  
+motion______--------   |_______ Flag
 
-motion______-------- |_______ Flag
-                     |_______ UFO
-                     |_______ Teleported
+                       |_______ UFO
+                     
+                       |_______ Teleported
 
 vector
 motion_mouse
